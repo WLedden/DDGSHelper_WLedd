@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DDGSHelper_WLedd"
+version = "0.0.1"
+dependencies = [
+    "ddgs"
+]
+authors = [
+  { name="William Ledden", email="WillLedden@outlook.com" },
+]
+description = "A small helper for more reliable DDGS image search"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
