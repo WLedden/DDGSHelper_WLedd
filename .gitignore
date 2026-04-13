@@ -1,0 +1,7 @@
+# created by virtualenv automatically
+
+*
+.dist/
+.idea/
+.DDGSHelper_WLedd.egg-info/
+!.gitignore
