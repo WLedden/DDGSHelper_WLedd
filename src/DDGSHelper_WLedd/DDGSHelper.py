@@ -38,12 +38,12 @@ def save_seen_urls(seen_urls, cache_file="seen_urls.json"):
 
     Path(cache_file).write_text(json.dumps(list(seen_urls)))
 
-def collect_images(query, region="uk-en", target=100, cache_file="seen_urls.json"):
+def collect_images(query, region="uk-en", target=100, attempts=10, cache_file="seen_urls.json"):
     seen_urls = load_seen_urls(cache_file)
     collected_images = []
 
     while len(collected_images) < target:
-        results = search_images(query, region, max_results=target * 2, attempts=50, base_sleep=0.5)
+        results = search_images(query, region, max_results=target * 2, attempts=attempts, base_sleep=0.5)
         new_results = [r for r in results if r["image"] not in seen_urls]
 
         for r in new_results:
